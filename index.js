@@ -95,6 +95,7 @@ app.get('/delete-task/:taskId', (req, res) => {
 
 // Clear all tasks
 app.post('/clear-tasks', (req, res) => {
+  // kirjutab taskidesse task asemel[], mis teeb tasks.json faili tühjaks 
   writeFile('./tasks.json', JSON.stringify([], null, 2))
     .then(() => {
       res.redirect('/');
