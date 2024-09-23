@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "task": "Study CSS"
+  },
+  {
+    "id": 2,
+    "task": "Study JS"
+  },
+  {
+    "id": 3,
+    "task": "Study OOP"
+  },
+  {
+    "id": 4,
+    "task": "Study HTTPS"
+  },
+  {
+    "id": 5,
+    "task": "Study HTML"
+  }
+]
