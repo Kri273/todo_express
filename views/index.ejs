@@ -10,7 +10,6 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-
         <div class="row">
             <div class="col s12 m6">
               <div class="card white">
@@ -39,8 +38,9 @@
                   <ul class="collection">
                     <% tasks.forEach((task) => { %>
                       <li class="collection-item"><%= task.task %>
-                      <a href="delete-task/<%= task.id %>" class="secondary-content"><i class="material-icons">delete</i></a>
-                      </li>
+                      <a style="padding-left: 5px;" href="delete-task/<%= task.id %>" class="secondary-content"><i class="material-icons">delete</i></a>
+                      <a href="edit-task/<%= task.id %>" class="secondary-content"><i class="material-icons">edit</i></a>
+                    </li>
                     <% }) %>
                   </ul>
                 </form>

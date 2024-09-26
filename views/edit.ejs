@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <title>Edit Task</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+   <div class="row">
+       <div class="col s12 m6">
+           <div class="card white">
+               <div class="card-content black-text">
+                   <span class="card-title">Edit Task</span>
+                   <% if (error) { %>
+                   <div class="row teal lighten-4">
+                       <div class="col s12">
+                           <p class="center-align"><%= error %></p>
+                       </div>
+                   </div>
+                   <% } %>
+                   <form method="post" action="/update-task/<%= task.id %>">
+                       <div class="input-field col s12">
+                           <input placeholder="Task" id="task" type="text" name="task" value="<%= task.task %>">
+                           <label class="active" for="task">Task</label>
+                       </div>
+                       <button class="btn waves-effect waves-light" type="submit" name="action">
+                           Update Task
+                       </button>
+                       <a href="/" class="btn waves-effect waves-light">Cancel</a>
+                    </button> 
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
